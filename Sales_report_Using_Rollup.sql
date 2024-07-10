@@ -1,8 +1,11 @@
+--Creating Database table
 /*CREATE TABLE Sales (
     ProductCategory VARCHAR(50),
     ProductName VARCHAR(50),
     SaleAmount DECIMAL(10, 2)
 );
+
+--Inserting values into the table
 INSERT INTO Sales (ProductCategory, ProductName, SaleAmount) VALUES
 ('Electronics', 'Laptop', 1000),
 ('Electronics', 'Phone', 800),
@@ -17,7 +20,7 @@ INSERT INTO Sales (ProductCategory, ProductName, SaleAmount) VALUES
 ('Clothing', 'Pajama', 350),
 ('Clothing', 'Punjabi', 800);*/
 
-
+--Rollup funtion to generate sales report
 SELECT 
     COALESCE(ProductCategory, 'Total') AS ProductCategory, 
     COALESCE(ProductName, 'Total') AS ProductName, 
